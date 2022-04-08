@@ -1,0 +1,40 @@
+{
+    "running": true,
+    "state": "voting",
+    "total_time": 600,
+    "time_left": 0,
+    "won_idx": 0,
+    "call_to_station_id": "foute_uur_nl",
+    "id": 685005,
+    "button_color": "#ed3624",
+    "images": {
+        "header": "/1/ff/1d/e7/24/e53c1d4b-d4b1-42dd-a887-98ca3e455528-729ee247-dc36-40df-ab07-a7a17b33bbeb-9ff47ce2-6986-49f0-8e3a-b6c09ce5a70c-HFU_MGP.jpg"
+    },
+    "messages": {
+        "teaser": "Wil je meer van het Foute Uur?",
+        "mgp_finished": "Het Foute Uur is afgelopen. Morgen kun je weer stemmen op de foutste nummers.",
+        "button": "Luister naar het Foute Uur"
+    },
+    "songs": [
+        {
+            "id": 1370009,
+            "title": "Lambada",
+            "artist": "KAOMA",
+            "image_hash": "/e/43/ac/54/18770/4124a-scannen0038.jpg",
+            "score": {
+                "real": 716,
+                "percentage": 100
+            }
+        },
+        {
+            "id": 1370011,
+            "title": "La Isla Bonita",
+            "artist": "MADONNA",
+            "image_hash": "/c/32/36/72/26045/Madonna-La-Isla-Bonita-10240.jpg",
+            "score": {
+                "real": 266,
+                "percentage": 37.32590529247911
+            }
+        }
+    ]
+}
