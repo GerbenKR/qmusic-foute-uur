@@ -23,8 +23,6 @@ function App() {
             const root = JSON.parse(data.data);
             const body = JSON.parse(root.data).data;
 
-            console.log(body);
-
             if (body.running == false) {
                 setActive(false);
                 setData(null);
