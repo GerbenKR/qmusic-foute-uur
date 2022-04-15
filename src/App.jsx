@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 function App() {
     const [active, setActive] = useState(false);
     const [data, setData] = useState(null);
+    const [connected, setConnected] = useState(false);
 
     useEffect(() => {
         const websocket = new SockJS('https://socket.qmusic.nl/api/');
@@ -16,6 +17,7 @@ function App() {
         websocket.onopen = () => {
             console.log('[websocket] connected to the websocket server');
             websocket.send(JSON.stringify({ action: 'join', backlog: 1, id: 1, sub: { action: 'change', entity: 'mgp', station: 'qmusic_nl' } }));
+            setConnected(true);
         };
 
         websocket.onmessage = (data) => {
@@ -42,11 +44,14 @@ function App() {
 
         websocket.onclose = () => {
             console.log('[websocket] connection closed');
+            setConnected(false);
         };
     }, []);
 
     return (
         <div className="bg-q-red h-full">
+            {connected == true && <p className="lg:absolute lg:ml-10 lg:mt-10 lg:inline-block lg:p-3 text-white bg-q-carbon-gray p-3 text-center ">Status: verbonden</p>}
+            {connected == false && <p className="lg:absolute lg:ml-10 lg:mt-10 lg:inline-block lg:p-3 text-red-600 bg-q-carbon-gray p-3 text-center ">Status: niet verbonden</p>}
             <Header />
 
             {active == true && data != null && <Active data={data} />}
